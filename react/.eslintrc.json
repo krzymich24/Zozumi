@@ -1,0 +1,55 @@
+{
+  "env": {
+    "browser": true
+  },
+  "extends": [
+    "plugin:tailwindcss/recommended",
+    "airbnb",
+    "airbnb/hooks",
+    "prettier"
+  ],
+  "plugins": [
+    "tailwindcss",
+    "@typescript-eslint",
+    "prettier"
+  ],
+  "rules": {
+    "prettier/prettier": [
+      "error"
+    ],
+    "import/prefer-default-export": "off",
+    "import/no-extraneous-dependencies": "off",
+    "react/react-in-jsx-scope": "off",
+    "react/destructuring-assignment": "off",
+    "react/require-default-props": "off",
+    "react/function-component-definition": "off",
+    "react-hooks/exhaustive-deps": "warn",
+    "jsx-a11y/label-has-associated-control": "off",
+    "jsx-a11y/anchor-is-valid": "off"
+  },
+  "overrides": [
+    {
+      "files": [
+        "*.ts",
+        "*.tsx"
+      ],
+      "extends": [
+        "airbnb-typescript",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:@typescript-eslint/recommended-requiring-type-checking"
+      ],
+      "parserOptions": {
+        "project": [
+          "./tsconfig.json"
+        ]
+      },
+      "rules": {
+        "@typescript-eslint/ban-ts-comment": 0,
+        "@typescript-eslint/no-this-alias": 1,
+        "@typescript-eslint/no-empty-function": 1,
+        "@typescript-eslint/no-unused-vars": 1,
+        "@typescript-eslint/no-unsafe-return": "warn"
+      }
+    }
+  ]
+}

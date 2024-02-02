@@ -1,0 +1,19 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+@import 'tailwindcss/variants.css';
+
+@layer base {
+    body {
+        @apply bg-base-200;
+    }
+    .table-full-width{
+      width: 100%;
+    }
+    .td-motopedia {
+      text-align: center;
+    }
+    .spacer {
+      height: 100px; /* Adjust the height to control the spacing */
+    }
+}

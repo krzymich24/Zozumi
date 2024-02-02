@@ -1,0 +1,6 @@
+@import './assets/styles/atom.css';
+
+body, #root {
+  min-height: 100vh;
+}
+

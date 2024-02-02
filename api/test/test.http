@@ -1,0 +1,55 @@
+POST http://localhost:3000/person
+Content-Type: application/json
+
+{}
+
+### Good login
+
+PUT http://localhost:3000/person/login?username=admin&password=admin
+Content-Type: application/json
+
+{}
+
+### Bad password
+
+PUT http://localhost:3000/person/login?username=admin&password=janusz
+Content-Type: application/json
+
+{}
+
+### Bad username
+
+PUT http://localhost:3000/person/login?username=janusz&password=admin
+Content-Type: application/json
+
+{}
+
+### Register
+
+POST http://localhost:3000/person/register?username=janusz&password=janusz&email=janusz@pols.ka
+Content-Type: application/json
+
+{}
+
+### Activate a new Account
+
+PUT http://localhost:3000/person/activate?otp=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYW5BY3RpdmF0ZSI6MiwiaWF0IjoxNzA0Mjk4MzQxfQ.7dGsOCJgVg7Qk5yCBsBDbdoIjpxGuFWx0MOrWpIX52U
+Content-Type: application/json
+
+{}
+
+
+### Request passwd reset
+
+POST http://localhost:3000/person/forgotten?email=janusz@pols.ka
+Content-Type: application/json
+
+{}
+
+
+### Follow through w/ passwd reset
+
+PUT http://localhost:3000/person/reset?password=qwerty12345&otp=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYW5SZXNldCI6MiwiaWF0IjoxNzA0MzAwNTIxfQ.fm0n4Gy_v06Z2XJWu3SjW8LXXcaTMvWRtKgUdwa3Akw
+Content-Type: application/json
+
+{}
