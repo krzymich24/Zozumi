@@ -19,7 +19,7 @@ export function Home() {
     <div className="flex justify-center">
       <div className="container">
         <header className="sticky top-0 z-10 bg-base-200">
-          <h1 style={{ fontSize: '40px', fontWeight: 'bold' }}>Integrated Motorization Platform</h1>
+          <h1 style={{ fontSize: '40px', fontWeight: 'bold' }}>Zozumi eBPF Firewall Managing Application</h1>
           <div className="divider" />
         </header>
         <main>
