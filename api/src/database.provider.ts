@@ -12,7 +12,7 @@ export const databaseProvider = [
         port: 5432, // fixme: var
         username: 'root',
         password: 'root',
-        database: 'vehicle_db',
+        database: 'webapp_db',
         entities: [
           join(__dirname, '**', '*.entity.{ts,js}'),
         ],
