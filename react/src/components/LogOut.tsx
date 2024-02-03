@@ -2,7 +2,7 @@ import { Link, Navigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { GymCard, GymCardProps } from './GymCard';
 import { API } from '../api';
-import Background from '../assets/img/Rim_bye.jpeg';
+import Background from '../assets/img/firewall-logout.jpeg';
 
 export function LogOut() {
   return (
