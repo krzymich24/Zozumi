@@ -22,7 +22,7 @@ export function Home() {
   const [inputValue, setInputValue] = useState('');
 
   // Function to handle button click and toggle the display of the input form
-  const handleButtonClick = () => {
+  const addRule = () => {
     setShowForm(!showForm); // Toggle the state
   };
 
@@ -55,7 +55,7 @@ export function Home() {
             <GymCard id={id} image={image} location={location} name={name} />
           ))}
           <div>
-            <button className="btn-primary btn" onClick={handleButtonClick}>Add rule</button>
+            <button className="btn-primary btn" onClick={addRule}>Add rule</button>
             {showForm && (
               <div className="card w-full max-w-sm shrink-0 bg-base-100 shadow-2xl">
               <form className="card-body" onSubmit={handleSubmit}>
@@ -145,6 +145,7 @@ export function Home() {
               </div>
             )}
           </div>
+          <button className="btn-primary btn">Show all rules</button>
         </main>
       </div>
     </div>

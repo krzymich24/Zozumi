@@ -17,8 +17,8 @@ export function LogOut() {
         <div className="max-w-md">
           <h1 className="mb-5 text-5xl font-bold">Logged out!</h1>
           <p className="mb-5">Sad to see you go 😢 We hope to see you again soon!</p>
-          <Link to="/home">
-            <button className="btn-primary btn">Back to IMP!</button>
+          <Link to="/">
+            <button className="btn-primary btn">Back to Zozumi!</button>
           </Link>
         </div>
       </div>
