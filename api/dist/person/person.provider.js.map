@@ -1,0 +1,1 @@
+{"version":3,"file":"person.provider.js","sourceRoot":"","sources":["../../src/person/person.provider.ts"],"names":[],"mappings":";;;AACA,mDAAyC;AACzC,4DAAmD;AAEtC,QAAA,WAAW,GAAG,mBAAmB,CAAC;AAElC,QAAA,cAAc,GAAG;IAC5B;QACE,OAAO,EAAE,mBAAW;QACpB,UAAU,EAAE,CAAC,UAAsB,EAAE,EAAE,CAAC,UAAU,CAAC,aAAa,CAAC,sBAAM,CAAC;QACxE,MAAM,EAAE,CAAC,+BAAW,CAAC;KACtB;CACF,CAAC"}

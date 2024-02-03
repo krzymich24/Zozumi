@@ -1,0 +1,1 @@
+{"version":3,"file":"route.provider.js","sourceRoot":"","sources":["../../src/route/route.provider.ts"],"names":[],"mappings":";;;AACA,4DAAmD;AACnD,0DAAgD;AAEnC,QAAA,UAAU,GAAG,kBAAkB,CAAC;AAEhC,QAAA,aAAa,GAAG;IAC3B;QACE,OAAO,EAAE,kBAAU;QACnB,UAAU,EAAE,CAAC,UAAsB,EAAE,EAAE,CAAC,UAAU,CAAC,aAAa,CAAC,oBAAK,CAAC;QACvE,MAAM,EAAE,CAAC,+BAAW,CAAC;KACtB;CACF,CAAC"}
