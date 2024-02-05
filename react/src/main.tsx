@@ -2,26 +2,21 @@ import './index.css';
 import { createRoot } from 'react-dom/client';
 import { HashRouter, Outlet, Route, Routes } from 'react-router-dom';
 import React from 'react';
-import { LogIn } from './components/LogIn';
-import { LogOut } from './components/LogOut';
+import { LogIn } from './components/authentication/LogIn';
+import { LogOut } from './components/general/LogOut';
 import { Home } from './components/Home';
-import { Recovery } from './components/Recovery';
-import { SignIn } from './components/SignIn';
-import { Gym } from './components/Gym';
-import { ResetPassword } from './components/ResetPassword';
-import { Boulder } from './components/Boulder';
-import { AdmView } from './components/AdmView';
-import { Welcome } from './components/Welcome';
-import { NewRoute } from './components/NewRoute';
-import { NewGym } from './components/NewGym';
+import { Recovery } from './components/authentication/Recovery';
+import { SignIn } from './components/authentication/SignIn';
+import { ResetPassword } from './components/authentication/ResetPassword';
+import { Welcome } from './components/general/Welcome';
 import { AuthProvider } from './authProvider';
-import { Header } from './components/Header';
-import { Settings } from './components/Settings';
-import { ChangePassword } from './components/ChangePassword';
-import { Profile } from './components/Profile';
-import { Footer } from './components/Footer';
-import { ActivateProfile } from './components/ActivateProfile';
-import { Error } from './components/Error';
+import { Header } from './components/general/Header';
+import { Settings } from './components/general/Settings';
+import { ChangePassword } from './components/authentication/ChangePassword';
+import { Profile } from './components/general/Profile';
+import { Footer } from './components/general/Footer';
+import { ActivateProfile } from './components/authentication/ActivateProfile';
+import { Error } from './components/general/Error';
 import { Logs } from './components/Logs';
 
 const App = document.getElementById('root');
@@ -71,12 +66,10 @@ const Root = () => (
             <Route path="changepassword" element={<ChangePassword />} />
           </Route>
 
-          <Route path="admin" element={<AdmView />} />
           <Route path="/logout" element={<LogOut />} />
           <Route path="/logs" element={<Logs />} />
           <Route path="/error" element={<Error />} />
           <Route path="/home" element={<Home />} />
-
         </Route>
       </Routes>
     </HashRouter>

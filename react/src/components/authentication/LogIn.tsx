@@ -2,9 +2,9 @@ import { useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AxiosError } from 'axios';
 import { Maybe } from 'typescript-functional-extensions';
-import { AuthService } from '../services/auth';
-import { useAuth } from '../useAuth.hooks';
-import Background from '../assets/img/shield-login.jpeg';
+import { AuthService } from '../../services/auth';
+import { useAuth } from '../../useAuth.hooks';
+import Background from '../../assets/img/shield-login.jpeg';
 
 export function LogIn() {
   const [username, setUsername] = useState<string>();

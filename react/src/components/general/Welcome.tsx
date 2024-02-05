@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import Background from '../assets/img/firewall-welcome.jpeg';
+import Background from '../../assets/img/firewall-welcome.jpeg';
 import React from "react";
 
 export function Welcome() {

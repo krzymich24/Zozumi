@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import * as _ from 'lodash';
 import React from 'react';
-import { useAuth } from '../useAuth.hooks';
+import { useAuth } from '../../useAuth.hooks';
 
 function AdminButton({ linksTo, text }: { linksTo: string; text: string }) {
   const { auth } = useAuth();

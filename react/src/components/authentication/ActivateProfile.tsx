@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { ClimbingBoxLoader } from 'react-spinners';
-import { API } from '../api';
+import { API } from '../../api';
 
 export function ActivateProfile() {
   const { token } = useParams();

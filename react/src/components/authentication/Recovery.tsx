@@ -1,16 +1,15 @@
 import { useState } from 'react';
-import { useParams } from "react-router-dom";
-import { API } from "../api";
+import { API } from '../../api';
 
-export function ResetPassword() {
-  const { token } = useParams();
-  const [password, setPassword] = useState<string>('');
+export function Recovery() {
+  const [email, setEmail] = useState<string>();
 
-  const setNewPassword = async () => {
+  const sendResetLink = async () => {
     try {
-      console.log('Password:', password);
-       const { data } = await API.put(`/person/reset?password=${password}&otp=${token}`, { password });
-       console.log(data);
+      console.log({ email });
+      const { data } = await API.post(`/person/forgotten?email=${email}`);
+      console.log(data);
+      return /* navigate */ '/home';
     } catch (e) {
       console.error((e as Error).message);
     }
@@ -28,20 +27,21 @@ export function ResetPassword() {
           >
             <div className="form-control">
               <label className="label">
-                <span className="label-text">New password</span>
+                <span className="label-text">Type email address to send a reset code</span>
               </label>
               <input
-                type="password"
+                type="email"
                 placeholder=""
                 className="input-bordered input"
                 required
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
+                onChange={(event) => {
+                  setEmail(event.target.value);
+                }}
               />
             </div>
             <div className="form-control mt-6">
-              <button className="btn-primary btn" type="button" onClick={setNewPassword}>
-                Set new password
+              <button className="btn-primary btn" type="submit" onClick={sendResetLink}>
+                Send reset code
               </button>
             </div>
           </form>
