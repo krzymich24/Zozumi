@@ -71,6 +71,7 @@ const Root = () => (
             <Route path="changepassword" element={<ChangePassword />} />
           </Route>
 
+          <Route path="admin" element={<AdmView />} />
           <Route path="/logout" element={<LogOut />} />
           <Route path="/logs" element={<Logs />} />
           <Route path="/error" element={<Error />} />

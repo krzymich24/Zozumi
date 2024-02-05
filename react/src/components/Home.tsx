@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
 import { GymCard, GymCardProps } from './GymCard';
 import { API } from '../api';
+import {BoulderCard} from "./BoulderCard";
+import {DeviceCard} from "./DeviceCard";
 
 export function Home() {
   const [gyms, setGyms] = useState<GymCardProps[]>([]);
