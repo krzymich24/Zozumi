@@ -85,6 +85,9 @@ export function Header() {
                 <li>
                   <Link to="/home">Home</Link>
                 </li>
+                <li>
+                  <Link to="/logs">Logs</Link>
+                </li>
               </ul>
             </div>
           </div>

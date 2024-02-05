@@ -55,6 +55,7 @@ export function Home() {
             <GymCard id={id} image={image} location={location} name={name} />
           ))}
           <div>
+            <button className="btn-primary btn">Show all rules</button>
             <button className="btn-primary btn" onClick={addRule}>Add rule</button>
             {showForm && (
               <div className="card w-full max-w-sm shrink-0 bg-base-100 shadow-2xl">
@@ -145,7 +146,6 @@ export function Home() {
               </div>
             )}
           </div>
-          <button className="btn-primary btn">Show all rules</button>
         </main>
       </div>
     </div>

@@ -22,6 +22,7 @@ import { Profile } from './components/Profile';
 import { Footer } from './components/Footer';
 import { ActivateProfile } from './components/ActivateProfile';
 import { Error } from './components/Error';
+import { Logs } from './components/Logs';
 
 const App = document.getElementById('root');
 
@@ -70,8 +71,8 @@ const Root = () => (
             <Route path="changepassword" element={<ChangePassword />} />
           </Route>
 
-          <Route path="admin" element={<AdmView />} />
           <Route path="/logout" element={<LogOut />} />
+          <Route path="/logs" element={<Logs />} />
           <Route path="/error" element={<Error />} />
           <Route path="/home" element={<Home />} />
 
