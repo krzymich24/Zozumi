@@ -3,21 +3,21 @@ import { createRoot } from 'react-dom/client';
 import { HashRouter, Outlet, Route, Routes } from 'react-router-dom';
 import React from 'react';
 import { LogIn } from './components/authentication/LogIn';
-import { LogOut } from './components/general/LogOut';
-import { Home } from './components/Home';
 import { Recovery } from './components/authentication/Recovery';
 import { SignIn } from './components/authentication/SignIn';
 import { ResetPassword } from './components/authentication/ResetPassword';
+import { ChangePassword } from './components/authentication/ChangePassword';
+import { ActivateProfile } from './components/authentication/ActivateProfile';
+import { LogOut } from './components/general/LogOut';
 import { Welcome } from './components/general/Welcome';
-import { AuthProvider } from './authProvider';
 import { Header } from './components/general/Header';
 import { Settings } from './components/general/Settings';
-import { ChangePassword } from './components/authentication/ChangePassword';
 import { Profile } from './components/general/Profile';
 import { Footer } from './components/general/Footer';
-import { ActivateProfile } from './components/authentication/ActivateProfile';
 import { Error } from './components/general/Error';
+import { Home } from './components/Home';
 import { Logs } from './components/Logs';
+import { AuthProvider } from './authProvider';
 
 const App = document.getElementById('root');
 
