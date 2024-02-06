@@ -30,7 +30,7 @@ export function DeviceCard({ id, name, ipAddress, image, deviceStatus }: DeviceC
         <div className="card-actions justify-end">
           <Link to={`/devices/${id}`} className="link-hover label-text-alt link">
             {/* eslint-disable-next-line react/button-has-type */}
-            <button className="btn-primary btn">details</button>
+            <button className="btn-primary btn">Details</button>
           </Link>
         </div>
       </div>

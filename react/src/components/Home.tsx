@@ -1,21 +1,8 @@
 import { useEffect, useState } from 'react';
-import { GymCard, GymCardProps } from './GymCard';
 import { API } from '../api';
-import {BoulderCard} from "./BoulderCard";
-import {DeviceCard} from "./DeviceCard";
+import {DeviceCard, DeviceCardProps} from "./DeviceCard";
 
 export function Home() {
-  const [gyms, setGyms] = useState<GymCardProps[]>([]);
-
-  const fetchGyms = async () => {
-    const { data } = await API.get('/gym/');
-    // console.warn(data);
-    setGyms(data);
-  };
-
-  useEffect(() => {
-    fetchGyms();
-  }, []);
 
   // State to track whether the input form should be displayed
   const [showForm, setShowForm] = useState(false);
@@ -53,9 +40,7 @@ export function Home() {
           <div className="divider" />
         </header>
         <main>
-          {gyms.map(({ id, image, location, name }) => (
-            <GymCard id={id} image={image} location={location} name={name} />
-          ))}
+
           <div>
             <button className="btn-primary btn">Show all rules</button>
             <button className="btn-primary btn" onClick={addRule}>Add rule</button>

@@ -17,7 +17,9 @@ import { Footer } from './components/general/Footer';
 import { Error } from './components/general/Error';
 import { Home } from './components/Home';
 import { Logs } from './components/Logs';
+import { Device } from './components/Device';
 import { AuthProvider } from './authProvider';
+import { DeviceCard } from "./components/DeviceCard";
 
 const App = document.getElementById('root');
 
@@ -70,6 +72,11 @@ const Root = () => (
           <Route path="/logs" element={<Logs />} />
           <Route path="/error" element={<Error />} />
           <Route path="/home" element={<Home />} />
+
+          <Route path="device">
+            <Route path=":deviceid" element={<Device />} />
+          </Route>
+
         </Route>
       </Routes>
     </HashRouter>
