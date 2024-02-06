@@ -3,12 +3,12 @@ import { Link } from 'react-router-dom';
 export interface DeviceCardProps {
   id: string;
   name: string;
-  ipaddress: string;
+  ipAddress: string;
   image: string;
-  devicestatus: string;
+  deviceStatus: string;
 }
 
-export function DeviceCard({ id, name, ipaddress, image, devicestatus }: DeviceCardProps) {
+export function DeviceCard({ id, name, ipAddress, image, deviceStatus }: DeviceCardProps) {
   return (
     <div key={`device-${id}`} className="card card-side mb-5 bg-base-100 shadow-xl">
       <figure className="w-1/4">
@@ -20,12 +20,12 @@ export function DeviceCard({ id, name, ipaddress, image, devicestatus }: DeviceC
         <p>
           {/* <span className="indicator-item badge mr-1">modified</span> */}
           {/* <span className="indicator-item badge badge-primary mr-1">new</span> */}
-          {ipaddress}
+          {ipAddress}
         </p>
         <p>
           {/* <span className="indicator-item badge mr-1">modified</span> */}
           {/* <span className="indicator-item badge badge-primary mr-1">new</span> */}
-          {devicestatus}
+          {deviceStatus}
         </p>
         <div className="card-actions justify-end">
           <Link to={`/devices/${id}`} className="link-hover label-text-alt link">
