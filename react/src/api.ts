@@ -4,7 +4,7 @@ import { networkInterfaces } from 'os';
 // Function to find the IP address associated with the specified network interface
 function getIPAddress(interfaceName) {
   const interfaces = networkInterfaces();
-  if (interfaces[interfaceName]) {
+  if (interfaces && interfaces[interfaceName]) {
     const iface = interfaces[interfaceName].find(iface => iface.family === 'IPv4');
     if (iface) {
       return iface.address;
