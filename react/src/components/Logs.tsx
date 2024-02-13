@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import { GymCard, GymCardProps } from './GymCard';
 import { API } from '../api';
 
 export function Logs() {

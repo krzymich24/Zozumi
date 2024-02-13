@@ -1,6 +1,5 @@
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import React, { useEffect, useState } from 'react';
-import { GymCardProps } from '../GymCard';
 import { API } from '../../api';
 import { useAuth } from '../../useAuth.hooks';
 import { Boulder } from '../../types/boulder';
