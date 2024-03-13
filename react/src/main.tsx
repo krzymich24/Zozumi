@@ -19,6 +19,7 @@ import { Home } from './components/Home';
 import { Logs } from './components/Logs';
 import { Device } from './components/Device';
 import { AuthProvider } from './authProvider';
+import { Test } from './components/Test';
 import { DeviceCard } from "./components/DeviceCard";
 
 const App = document.getElementById('root');
@@ -72,6 +73,7 @@ const Root = () => (
           <Route path="/logs" element={<Logs />} />
           <Route path="/error" element={<Error />} />
           <Route path="/home" element={<Home />} />
+          <Route path="/test" element={<Test />} />
 
           <Route path="device">
             <Route path=":deviceid" element={<Device />} />
