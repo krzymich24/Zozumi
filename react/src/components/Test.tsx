@@ -1,4 +1,29 @@
+import { useState } from "react";
+
 export function Test() {
+
+  const [comment, setComment] = useState<string>();
+  const [name, setName] = useState<string>();
+  const [action, setAction] = useState<string>();
+  const [protocol, setProtocol] = useState<string>();
+  const [srcIP, setSourceIP] = useState<string>();
+  const [destIP, setDestinationIP] = useState<string>();
+  const [srcPort, setSourcePort] = useState<string>();
+  const [destPort, setDestinationPort] = useState<string>();
+
+  function AddRule() {
+
+    console.log('Additional comment:', comment);
+    console.log('Name:', name);
+    console.log('Action:', action);
+    console.log('Protocol:', protocol);
+    console.log('Source IP:', srcIP);
+    console.log('Destination IP:', destIP);
+    console.log('Source Port:', srcPort);
+    console.log('Destination Port:', destPort);
+
+  }
+  // @ts-ignore
   return (
     <div>
       <div
@@ -123,55 +148,55 @@ export function Test() {
       <input type="checkbox" id="Add_rule_modal" className="modal-toggle" />
       <div className="modal" role="dialog">
         <div className="modal-box">
-          <form>
+          <form onSubmit={AddRule}>
             <div className="form-control">
               <h1 style={{ textAlign: 'center', fontSize: '40px', width: '100%' }}>New rule</h1>
               <label className="label">
                 <span className="label-text">Addictional comment</span>
               </label>
-              <input type="text" placeholder="addictional comment" className="input-bordered input" />
+              <input type="text" placeholder="addictional comment" className="input-bordered input" onChange={(event) => {setComment(event.target.value);}}  />
             </div>
             <div className="form-control">
               <label className="label">
                 <span className="label-text">Rule name</span>
               </label>
-              <input type="text" placeholder="rule name" className="input-bordered input" />
+              <input type="text" placeholder="rule name" className="input-bordered input" onChange={(event) => {setName(event.target.value);}}/>
             </div>
             <div className="form-control">
               <label className="label">
                 <span className="label-text">Action</span>
               </label>
-              <input type="text" placeholder="action" className="input-bordered input" />
+              <input type="text" placeholder="action" className="input-bordered input" onChange={(event) => {setAction(event.target.value);}} />
             </div>
             <div className="form-control">
               <label className="label">
                 <span className="label-text">Protocol</span>
               </label>
-              <input type="text" placeholder="protocol" className="input-bordered input" />
+              <input type="text" placeholder="protocol" className="input-bordered input" onChange={(event) => {setProtocol(event.target.value);}} />
             </div>
             <div className="form-control">
               <label className="label">
                 <span className="label-text">Source IP</span>
               </label>
-              <input type="text" placeholder="source ip" className="input-bordered input" />
+              <input type="text" placeholder="source ip" className="input-bordered input" onChange={(event) => {setSourceIP(event.target.value);}} />
             </div>
             <div className="form-control">
               <label className="label">
                 <span className="label-text">Destination IP</span>
               </label>
-              <input type="text" placeholder="destination ip" className="input-bordered input" />
+              <input type="text" placeholder="destination ip" className="input-bordered input" onChange={(event) => {setDestinationIP(event.target.value);}} />
             </div>
             <div className="form-control">
               <label className="label">
                 <span className="label-text">Source Port</span>
               </label>
-              <input type="text" placeholder="source port" className="input-bordered input" />
+              <input type="text" placeholder="source port" className="input-bordered input" onChange={(event) => {setSourcePort(event.target.value);}} />
             </div>
             <div className="form-control">
               <label className="label">
                 <span className="label-text">Destination Port</span>
               </label>
-              <input type="text" placeholder="destination port" className="input-bordered input" />
+              <input type="text" placeholder="destination port" className="input-bordered input" onChange={(event) => {setDestinationPort(event.target.value);}} />
             </div>
             <br />
             <div className="modal-action">
