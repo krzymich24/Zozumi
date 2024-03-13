@@ -1,7 +1,6 @@
-import { useState } from "react";
+import { useState } from 'react';
 
 export function Test() {
-
   const [comment, setComment] = useState<string>();
   const [name, setName] = useState<string>();
   const [action, setAction] = useState<string>();
@@ -12,7 +11,6 @@ export function Test() {
   const [destPort, setDestinationPort] = useState<string>();
 
   function AddRule() {
-
     console.log('Additional comment:', comment);
     console.log('Name:', name);
     console.log('Action:', action);
@@ -21,8 +19,24 @@ export function Test() {
     console.log('Destination IP:', destIP);
     console.log('Source Port:', srcPort);
     console.log('Destination Port:', destPort);
-
   }
+
+  function TestConnection(elementID) {
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
+    const element = document.getElementById(elementID);
+    if (element) {
+      if (element.textContent === 'Connected') {
+        element.textContent = 'Disconnected';
+        element.className = 'indicator-end indicator-middle badge-primary badge indicator-item';
+      } else {
+        element.textContent = 'Connected';
+        element.className = 'indicator-end indicator-middle badge-secondary badge indicator-item';
+      }
+    } else {
+      console.error('Element with ID ConStat not found.');
+    }
+  }
+
   // @ts-ignore
   return (
     <div>
@@ -50,8 +64,11 @@ export function Test() {
           <p>IP Address: 192.168.1.13</p>
           <p>MAC: 12:23:24:24:13:AD:12</p>
           <div className="indicator">
-            <p>Status:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
-            <span className="indicator-end indicator-middle badge-secondary badge indicator-item"> Connected </span>
+            <p>Status:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+            <span id="ConStat" className="indicator-end indicator-middle badge-secondary badge indicator-item">
+              {' '}
+              Connected{' '}
+            </span>
           </div>
           <br />
           <div style={{ display: 'flex', flexDirection: 'row', width: '100%' }}>
@@ -64,7 +81,11 @@ export function Test() {
               Show set rules
             </label>
             {/* eslint-disable-next-line react/button-has-type */}
-            <button className="btn-primary btn" style={{ flex: '1 0 0', marginRight: '10px' }}>
+            <button
+              className="btn-primary btn"
+              style={{ flex: '1 0 0', marginRight: '10px' }}
+              onClick={() => TestConnection('ConStat')}
+            >
               Test connection
             </button>
             {/* The button to open modal */}
@@ -154,49 +175,105 @@ export function Test() {
               <label className="label">
                 <span className="label-text">Addictional comment</span>
               </label>
-              <input type="text" placeholder="addictional comment" className="input-bordered input" onChange={(event) => {setComment(event.target.value);}}  />
+              <input
+                type="text"
+                placeholder="addictional comment"
+                className="input-bordered input"
+                onChange={(event) => {
+                  setComment(event.target.value);
+                }}
+              />
             </div>
             <div className="form-control">
               <label className="label">
                 <span className="label-text">Rule name</span>
               </label>
-              <input type="text" placeholder="rule name" className="input-bordered input" onChange={(event) => {setName(event.target.value);}}/>
+              <input
+                type="text"
+                placeholder="rule name"
+                className="input-bordered input"
+                onChange={(event) => {
+                  setName(event.target.value);
+                }}
+              />
             </div>
             <div className="form-control">
               <label className="label">
                 <span className="label-text">Action</span>
               </label>
-              <input type="text" placeholder="action" className="input-bordered input" onChange={(event) => {setAction(event.target.value);}} />
+              <input
+                type="text"
+                placeholder="action"
+                className="input-bordered input"
+                onChange={(event) => {
+                  setAction(event.target.value);
+                }}
+              />
             </div>
             <div className="form-control">
               <label className="label">
                 <span className="label-text">Protocol</span>
               </label>
-              <input type="text" placeholder="protocol" className="input-bordered input" onChange={(event) => {setProtocol(event.target.value);}} />
+              <input
+                type="text"
+                placeholder="protocol"
+                className="input-bordered input"
+                onChange={(event) => {
+                  setProtocol(event.target.value);
+                }}
+              />
             </div>
             <div className="form-control">
               <label className="label">
                 <span className="label-text">Source IP</span>
               </label>
-              <input type="text" placeholder="source ip" className="input-bordered input" onChange={(event) => {setSourceIP(event.target.value);}} />
+              <input
+                type="text"
+                placeholder="source ip"
+                className="input-bordered input"
+                onChange={(event) => {
+                  setSourceIP(event.target.value);
+                }}
+              />
             </div>
             <div className="form-control">
               <label className="label">
                 <span className="label-text">Destination IP</span>
               </label>
-              <input type="text" placeholder="destination ip" className="input-bordered input" onChange={(event) => {setDestinationIP(event.target.value);}} />
+              <input
+                type="text"
+                placeholder="destination ip"
+                className="input-bordered input"
+                onChange={(event) => {
+                  setDestinationIP(event.target.value);
+                }}
+              />
             </div>
             <div className="form-control">
               <label className="label">
                 <span className="label-text">Source Port</span>
               </label>
-              <input type="text" placeholder="source port" className="input-bordered input" onChange={(event) => {setSourcePort(event.target.value);}} />
+              <input
+                type="text"
+                placeholder="source port"
+                className="input-bordered input"
+                onChange={(event) => {
+                  setSourcePort(event.target.value);
+                }}
+              />
             </div>
             <div className="form-control">
               <label className="label">
                 <span className="label-text">Destination Port</span>
               </label>
-              <input type="text" placeholder="destination port" className="input-bordered input" onChange={(event) => {setDestinationPort(event.target.value);}} />
+              <input
+                type="text"
+                placeholder="destination port"
+                className="input-bordered input"
+                onChange={(event) => {
+                  setDestinationPort(event.target.value);
+                }}
+              />
             </div>
             <br />
             <div className="modal-action">
