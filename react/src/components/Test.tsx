@@ -31,7 +31,11 @@ export function Test() {
           <br />
           <div style={{ display: 'flex', flexDirection: 'row', width: '100%' }}>
             {/* The button to open modal */}
-            <label htmlFor="my_modal_1" className="btn-primary btn" style={{ flex: '1 0 0', marginRight: '10px' }}>
+            <label
+              htmlFor="Show_rules_modal"
+              className="btn-primary btn"
+              style={{ flex: '1 0 0', marginRight: '10px' }}
+            >
               Show set rules
             </label>
             {/* eslint-disable-next-line react/button-has-type */}
@@ -39,7 +43,7 @@ export function Test() {
               Test connection
             </button>
             {/* The button to open modal */}
-            <label htmlFor="my_modal_2" className="btn-primary btn" style={{ flex: '1 0 0', marginRight: '10px' }}>
+            <label htmlFor="Add_rule_modal" className="btn-primary btn" style={{ flex: '1 0 0', marginRight: '10px' }}>
               Add rule
             </label>
           </div>
@@ -47,7 +51,7 @@ export function Test() {
       </div>
 
       {/* Put this part before </body> tag */}
-      <input type="checkbox" id="my_modal_1" className="modal-toggle" />
+      <input type="checkbox" id="Show_rules_modal" className="modal-toggle" />
       <div className="modal" role="dialog">
         <div className="modal-box" style={{ maxWidth: '100%' }}>
           <div className="overflow-x-auto">
@@ -108,7 +112,7 @@ export function Test() {
             </table>
           </div>
           <div className="modal-action ">
-            <label htmlFor="my_modal_1" className="btn">
+            <label htmlFor="Show_rules_modal" className="btn">
               Close!
             </label>
           </div>
@@ -116,7 +120,7 @@ export function Test() {
       </div>
 
       {/* Put this part before </body> tag */}
-      <input type="checkbox" id="my_modal_2" className="modal-toggle" />
+      <input type="checkbox" id="Add_rule_modal" className="modal-toggle" />
       <div className="modal" role="dialog">
         <div className="modal-box">
           <form>
@@ -174,7 +178,7 @@ export function Test() {
               <button className="btn-primary btn" type="submit">
                 Submit
               </button>
-              <label htmlFor="my_modal_2" className="btn">
+              <label htmlFor="Add_rule_modal" className="btn">
                 Close!
               </label>
             </div>
