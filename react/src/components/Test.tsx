@@ -80,6 +80,9 @@ export function Test() {
             >
               Show set rules
             </label>
+            <label htmlFor="Show_logs_modal" className="btn-primary btn" style={{ flex: '1 0 0', marginRight: '10px' }}>
+              Show logs
+            </label>
             {/* eslint-disable-next-line react/button-has-type */}
             <button
               className="btn-primary btn"
@@ -159,6 +162,70 @@ export function Test() {
           </div>
           <div className="modal-action ">
             <label htmlFor="Show_rules_modal" className="btn">
+              Close!
+            </label>
+          </div>
+        </div>
+      </div>
+
+      {/* Put this part before </body> tag */}
+      <input type="checkbox" id="Show_logs_modal" className="modal-toggle" />
+      <div className="modal" role="dialog">
+        <div className="modal-box" style={{ maxWidth: '100%' }}>
+          <div className="overflow-x-auto">
+            <table className="table " style={{ textAlign: 'center', width: '100%' }}>
+              {/* head */}
+              <thead>
+                <tr>
+                  {/* eslint-disable-next-line jsx-a11y/control-has-associated-label */}
+                  <th />
+                  <th>Time</th>
+                  <th>Date</th>
+                  <th>Protocol</th>
+                  <th>Source</th>
+                  <th>Destination</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                {/* row 1 */}
+                <tr className="bg-base-200">
+                  {/* eslint-disable-next-line jsx-a11y/control-has-associated-label */}
+                  <th />
+                  <td>14:24:25.592</td>
+                  <td> 16-01-2024 </td>
+                  <td>UDP</td>
+                  <td>192.168.2.12</td>
+                  <td>14.23.52.21</td>
+                  <td>Blocked</td>
+                </tr>
+                {/* row 2 */}
+                <tr className="bg-base-200">
+                  {/* eslint-disable-next-line jsx-a11y/control-has-associated-label */}
+                  <th />
+                  <td>14:24:26.592</td>
+                  <td>16-01-2024</td>
+                  <td>TCP</td>
+                  <td>192.168.2.12:3000</td>
+                  <td>14.23.52.21:5000</td>
+                  <td>Passed</td>
+                </tr>
+                {/* row 3 */}
+                <tr className="bg-base-200">
+                  {/* eslint-disable-next-line jsx-a11y/control-has-associated-label */}
+                  <th />
+                  <td>14:24:36.592</td>
+                  <td>16-01-2024</td>
+                  <td>ICMP</td>
+                  <td>192.168.2.12</td>
+                  <td>52.21.53.21</td>
+                  <td>Blocked</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div className="modal-action ">
+            <label htmlFor="Show_logs_modal" className="btn">
               Close!
             </label>
           </div>
